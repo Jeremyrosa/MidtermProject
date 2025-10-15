@@ -5,12 +5,104 @@
 		<title>index</title>
 		<style type="text/css">
 			body { background-color: #FFE8E5; }
-		</style>
-	</head>
-	<body>
-		<h1>hellooo</h1>
-		<h1>yoooo</h1>
-		<h1>hello world again!</h1>
-		<h1>hello world again 2</h1>
+		<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #F2F3FF;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+    .upcoming {
+      background-color: #f0f8ff;
+    }
+    .ongoing {
+      background-color: #d4edda;
+    }
+    .completed {
+      background-color: #e2e3e5;
+      color: #555;
+    }
+	 <h1>Soccer Match Tracker</h1>
+  <form id="matchForm">
+    <input type="text" id="teamA" placeholder="Team A" required>
+    <input type="text" id="teamB" placeholder="Team B" required>
+    <input type="datetime-local" id="matchTime" required>
+    <button type="submit">Add Match</button>
+  </form>
+
+  <table id="matchTable">
+  <thead>
+    <tr>
+      <th>Teams</th>
+      <th>Kickoff</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="ongoing">
+      <td>Team3 vs Team4</td>
+      <td>October 14, 2025 – 11:00 PM</td>
+      <td>Ongoing</td>
+    </tr>
+    <tr class="upcoming">
+      <td>Team1 vs Team2</td>
+      <td>October 20, 2025 – 3:00 PM</td>
+      <td>45 min</td>
+    </tr>
+    <tr class="upcoming">
+      <td>Team7 vs Team8</td>
+      <td>October 22, 2025 – 6:30 PM</td>
+      <td>120 min</td>
+    </tr>
+    <tr class="completed">
+      <td>Team5 vs Team6</td>
+      <td>October 10, 2025 – 2:00 PM</td>
+      <td>Completed</td>
+    </tr>
+    <tr class="completed">
+      <td>Team9 vs Team10</td>
+      <td>October 5, 2025 – 1:00 PM</td>
+      <td>Completed</td>
+    </tr>
+  </tbody>
+</table>
+
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+  }
+  th, td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  .upcoming {
+    background-color: #cce5ff; /* bright blue */
+    color: #003366;
+    font-weight: bold;
+  }
+  .ongoing {
+    background-color: #d4edda; /* bright green */
+    color: #155724;
+    font-weight: bold;
+  }
+  .completed {
+    background-color: #f8f9fa; /* light grey */
+    color: #6c757d;
+    font-style: italic;
+  }
+</style>	
 	</body>
 </html>
