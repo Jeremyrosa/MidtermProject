@@ -30,6 +30,48 @@
       color: #555;
     }
   </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      //gets form info
+      const form = document.getElementById("matchForm");
+      form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        AddMatch();
+      });
+    });
+
+    function AddMatch() {
+      // gets individual info from form
+      const teamA = document.getElementById("teamA").value;
+      const teamB = document.getElementById("teamB").value;
+      const matchTime = document.getElementById("matchTime").value;
+
+      // putting info together
+      const table = document.getElementById("matchTable").getElementsByTagName("tbody")[0];
+      const newRow = table.insertRow();
+      const teamsCell = newRow.insertCell(0);
+      const timeCell = newRow.insertCell(1);
+      const statusCell = newRow.insertCell(2);
+
+      // 'team vs team' cell format
+      teamsCell.textContent = `${teamA} vs ${teamB}`;
+
+      // setting date and time
+      const dates = new Date(matchTime);
+      const options = { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric' };
+      timeCell.textContent = dates.toLocaleString('en-US', options);
+
+      // setting status of match
+      statusCell.textContent = "Upcoming";
+      newRow.className = "upcoming";
+
+      // clearing form after submission
+      document.getElementById("teamA").value = "";
+      document.getElementById("teamB").value = "";
+      document.getElementById("matchTime").value = "";
+    }
+  </script>
 </head>
 <body>
 
@@ -47,6 +89,9 @@
       <th>Teams</th>
       <th>Kickoff</th>
       <th>Status</th>
+      <div id="Countdown">
+        <th>Countdown</th>
+      </div>
     </tr>
   </thead>
   <tbody>
