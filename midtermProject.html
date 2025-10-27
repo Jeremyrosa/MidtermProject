@@ -53,11 +53,11 @@
         AddMatch();
       });
 
-    function AddMatch() {
+    function AddMatch(teamAInput, teamBInput, matchTimeInput) {
       // gets individual info from form
-      const teamA = document.getElementById("teamA").value;
-      const teamB = document.getElementById("teamB").value;
-      const matchTime = document.getElementById("matchTime").value;
+      const teamA = teamAInput || document.getElementById("teamA").value;
+      const teamB = teamBInput || document.getElementById("teamB").value;
+      const matchTime = matchTimeInput || document.getElementById("matchTime").value;
 
       // putting info together
       const newRow = table.insertRow();
