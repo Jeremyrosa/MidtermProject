@@ -1,4 +1,4 @@
-<script>
+
     // checks that html page has loaded
     document.addEventListener("DOMContentLoaded", () => {
       const form = document.getElementById("matchForm");
@@ -123,4 +123,3 @@
         }
       }
     }
-  </script>
