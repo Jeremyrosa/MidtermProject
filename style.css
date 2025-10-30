@@ -1,3 +1,32 @@
+/*   Dark mode stying  */
+body {
+  background-color: #2b2c35;  /*  gray background */
+  color: #ffffff;             /* white text for contrast */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0 20px;
+}
+
+/*  header color section  */
+header {
+  background-color: #1b1b1d;  /*  black */
+  color: #ffffff;
+  text-align: left;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* so content isn't hidden under fixed header */
+body {
+  margin-top: 115px;
+}
+
+
 
   table {
     width: 100%;
@@ -21,7 +50,7 @@
     font-weight: bold;
   }
   .completed {
-    background-color: #f8f9fa; /* light grey */
-    color: #6c757d;
+    background-color: #474b4f; /* light grey */
+    color: #ffffff;
     font-style: italic;
   }
