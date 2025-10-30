@@ -80,7 +80,7 @@ function startCountdown(targetDate, countdownId, row, statusCell) { // function 
       // moves finished matches to the bottom of the table and labels them as "Completed"
       const tableBody = document.getElementById("matchTable").getElementsByTagName("tbody")[0];
       tableBody.appendChild(row);
-    }, 40 * 1000); // match lasts 90 minutes 
+    }, 10 * 1000); // match lasts 90 minutes 
 
     return;
   }
