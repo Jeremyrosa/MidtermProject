@@ -38,7 +38,13 @@ function AddMatch() { // creates new rows with new match dates
   const countdownId = "countdown_" + Date.now();
   countdownCell.id = countdownId;
 
-  startCountdown(dates, countdownId, newRow, statusCell); // function that starts countdowns with its attributes
+  // if match time already passed, mark completed instantly
+  if (dates.getTime() < new Date().getTime()) {
+    markAsCompleted(newRow, statusCell, countdownCell);
+  } else {
+    // or starts a countdown if date is upcoming
+    startCountdown(dates, countdownId, newRow, statusCell);
+  }
 
   const rows = Array.from(tableBody.rows); // makes sure new upcoming matches are added above "completed" matches
   let inserted = false;
@@ -96,6 +102,17 @@ function startCountdown(targetDate, countdownId, row, statusCell) { // function 
   }, 1000);
 }
 
+// checks for past dates and marks them as "Completed"
+function markAsCompleted(row, statusCell, countdownCell) {
+  row.classList.remove("upcoming", "ongoing");
+  row.classList.add("completed");
+  statusCell.textContent = "Completed";
+  countdownCell.innerHTML = "Completed";
+
+  const tableBody = document.getElementById("matchTable").getElementsByTagName("tbody")[0];
+  tableBody.appendChild(row);
+}
+
 // modifies "kickoff" time string so that it can be processed properly
 function kickoffString(str) {
   str = str.replace(/–/g, ':').trim();
@@ -117,8 +134,17 @@ function upcomingMatchesCountdown() { // identifies which rows are "upcoming"
       const countdownId = "countdown_" + Math.floor(Math.random() * 100000);
       countdownCell.id = countdownId;
 
-      const dates = kickoffString(timeCell.textContent); // converts "kickoff" to a readable string
-      startCountdown(dates, countdownId, row, statusCell); // starts countdown
+      const dates = kickoffString(timeCell.textContent); // converts "kickoff" to readable date
+
+      // check if past or upcoming dates
+      if (dates.getTime() < new Date().getTime()) {
+        // mark as completed for past dates
+        markAsCompleted(row, statusCell, countdownCell);
+      } else {
+        // start countdown for upcoming dates
+        startCountdown(dates, countdownId, row, statusCell);
       }
+    }
   }
 }
+
