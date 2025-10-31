@@ -120,9 +120,7 @@ function kickoffString(str) {
   // replace multiple spaces with single space
   str = str.replace(/\s+/g, ' ');
   const parsedDate = new Date(str);
-  if (isNaN(parsedDate)) {
-    console.warn("Invalid date:", str);
-  }
+  
   return parsedDate;
 }
 
