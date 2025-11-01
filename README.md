@@ -2,7 +2,7 @@
 
 # Group Members
 # Elianny - JavaScript
-# Jeanne
+# Jeanne - HTML & CSS
 # Jeremy - HTML & CSS
 # Shari
 
