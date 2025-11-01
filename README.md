@@ -1,7 +1,7 @@
 # MidtermProject
 
 # Group Members
-# Elianny 
+# Elianny - JavaScript
 # Jeanne
 # Jeremy - HTML & CSS
 # Shari
