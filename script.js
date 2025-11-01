@@ -13,12 +13,14 @@ document.addEventListener("DOMContentLoaded", () => { // checks that html page h
 function saveMatch(teamA, teamB, matchTime){
   let matches = JSON.parse(localStorage.getItem("matches")) || [];
   matches.push({teamA, teamB, matchTime});
+  matches.sort((a, b) => new Date(a.matchTime) - new Date(b.matchTime));
   localStorage.setItem("matches", JSON.stringify(matches));
 }
 
 // Loads saved matches from localStorage
 function loadMatches(){
   let matches = JSON.parse(localStorage.getItem("matches")) || [];
+  matches.sort((a, b) => new Date(a.matchTime) - new Date(b.matchTime));
   const tableBody = document.getElementById("matchTable").getElementsByTagName("tbody")[0];
 
   for (let match of matches) {
