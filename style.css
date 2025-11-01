@@ -5,6 +5,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0 20px;
+  padding-bottom: 8px;   /* padding for bottom bar */
 }
 
 /*  header color section  */
@@ -53,4 +54,23 @@ body {
     background-color: #474b4f; /* light grey */
     color: #ffffff;
     font-style: italic;
+  }
+
+/* Bottom bar shown on bottom of screen */
+  .bottom-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #585766;
+  display: flex;
+  justify-content: space-around; /*even spacing between images */
+  align-items: center;
+  padding: 10px 0;       /* adjusts vertical spacing */
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  }
+
+/* Style for each image in the bottom bar */
+  .bottom-bar img {
+  width: 40px;
+  height: auto;
   }
