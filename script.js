@@ -2,11 +2,11 @@ document.addEventListener("DOMContentLoaded", () => { // checks that html page h
   const form = document.getElementById("matchForm");
   form.addEventListener("submit", function(event) {
   event.preventDefault();
-    AddMatch();
+    addMatch();
   });
 
-  upcomingMatchesCountdown(); // function starts countdowns for existing dates
   loadMatches(); //load matches from localStorage
+  upcomingMatchesCountdown(); // function starts countdowns for existing dates
 });
 // Save matches to localStorage
 function saveMatch(teamA, teamB, matchTime){
@@ -55,7 +55,7 @@ function loadMatches(){
   }
 }
 
-function AddMatch() { // creates new rows with new match dates
+function addMatch() { // creates new rows with new match dates
   //input values
   const teamA = document.getElementById("teamA").value;
   const teamB = document.getElementById("teamB").value;
@@ -136,7 +136,7 @@ function startCountdown(targetDate, countdownId, row, statusCell) { // function 
       // moves finished matches to the bottom of the table and labels them as "Completed"
       const tableBody = document.getElementById("matchTable").getElementsByTagName("tbody")[0];
       tableBody.appendChild(row);
-    }, 90 * 60 * 1000); // match lasts 90 minutes *********************** aka SECONDSSSSSS **************************************
+    }, 90 * 60 * 1000); // match lasts 90 minutes
 
     return;
   }
@@ -196,10 +196,10 @@ function upcomingMatchesCountdown() { // identifies which rows are "upcoming"
         console.warn("Skipping invalid date:", timeCell.textContent);
         markAsCompleted(row, statusCell, countdownCell);
       } else if (dates.getTime() < new Date().getTime()) {
-        // past dates → mark as completed
+        // for past dates, mark as completed
         markAsCompleted(row, statusCell, countdownCell);
       } else {
-        // future dates → start countdown
+        // for future dates, start countdown
         startCountdown(dates, countdownId, row, statusCell);
       }
     }
