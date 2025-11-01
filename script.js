@@ -13,14 +13,12 @@ document.addEventListener("DOMContentLoaded", () => { // checks that html page h
 function saveMatch(teamA, teamB, matchTime){
   let matches = JSON.parse(localStorage.getItem("matches")) || [];
   matches.push({teamA, teamB, matchTime});
-  
   localStorage.setItem("matches", JSON.stringify(matches));
 }
 
 // Loads saved matches from localStorage
 function loadMatches(){
   let matches = JSON.parse(localStorage.getItem("matches")) || [];
-  
   const tableBody = document.getElementById("matchTable").getElementsByTagName("tbody")[0];
 
   for (let match of matches) {
@@ -40,14 +38,17 @@ function loadMatches(){
       month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric'
     });
 
+    timeCell.dataset.time = dates.getTime();
     statusCell.textContent = "Upcoming";
-
     const countdownId = "countdown_" + match.matchTime;
     countdownCell.id = countdownId;
 
+    // for past dates added/completed
     if (dates.getTime() < Date.now()) {
+      // mark as completed if past
       markAsCompleted(newRow, statusCell, countdownCell);
     } else {
+      // start countcountdown for future dates
       startCountdown(dates, countdownId, newRow, statusCell);
     }
 
@@ -83,6 +84,7 @@ function addMatch() { // creates new rows with new match dates
   timeCell.textContent = dates.toLocaleString('en-US', { // creates date format using "dates" input
     month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric'
   });
+  timeCell.dataset.time = dates.getTime();
   statusCell.textContent = "Upcoming"; // content inside status cell
 
   // ID for each countdown cell so that multiple countdowns can run at the same time
@@ -137,7 +139,7 @@ function startCountdown(targetDate, countdownId, row, statusCell) { // function 
       // moves finished matches to the bottom of the table and labels them as "Completed"
       const tableBody = document.getElementById("matchTable").getElementsByTagName("tbody")[0];
       tableBody.appendChild(row);
-    }, 90 * 60 * 1000); // match lasts 90 minutes
+    }, 90 * 60 * 1000); // match lasts 90 minutes in milliseconds
 
     return;
   }
@@ -159,19 +161,15 @@ function markAsCompleted(row, statusCell, countdownCell) {
   row.classList.add("completed");
   statusCell.textContent = "Completed";
   countdownCell.innerHTML = "Completed";
-
   const tableBody = document.getElementById("matchTable").getElementsByTagName("tbody")[0];
   tableBody.appendChild(row);
 }
 
 // modifies "kickoff" time string so that it can be processed properly
 function kickoffString(str) {
-  // replace en dash, em dash, or hyphen with a single space
   str = str.replace(/[–—-]/g, ' ').trim();
-  // replace multiple spaces with single space
   str = str.replace(/\s+/g, ' ');
   const parsedDate = new Date(str);
-  
   return parsedDate;
 }
 
@@ -189,14 +187,16 @@ function upcomingMatchesCountdown() { // identifies which rows are "upcoming"
       const countdownId = "countdown_" + Math.floor(Math.random() * 100000);
       countdownCell.id = countdownId;
 
-      const dates = kickoffString(timeCell.textContent); // converts "kickoff" to readable date
+      // converts "kickoff" to readable date
+      let dates;
+      if (timeCell.dataset.time) {
+        dates = new Date(parseInt(timeCell.dataset.time));
+      } else {
+        dates = kickoffString(timeCell.textContent);
+      }
 
       // check if past or upcoming dates
-      if (isNaN(dates.getTime())) {
-        // if date is invalid, mark as completed
-        console.warn("Skipping invalid date:", timeCell.textContent);
-        markAsCompleted(row, statusCell, countdownCell);
-      } else if (dates.getTime() < new Date().getTime()) {
+      if (dates.getTime() < new Date().getTime()) {
         // for past dates, mark as completed
         markAsCompleted(row, statusCell, countdownCell);
       } else {
@@ -210,9 +210,7 @@ function upcomingMatchesCountdown() { // identifies which rows are "upcoming"
 // Clear matches from localStorage
 function clearAllMatches(){
   localStorage.removeItem("matches");
-
   const tableBody = document.getElementById("matchTable").getElementsByTagName("tbody")[0];
-
   // deletes matches added by user
   const userRows = tableBody.querySelectorAll(".user-added");
   userRows.forEach(row => row.remove());
