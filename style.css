@@ -62,7 +62,8 @@ body {
   bottom: 0;
   left: 0;
   width: 100vw;
-  background-color: #585766;
+  height: 60px;
+  background-color: ##51508D;
   display: flex;
   justify-content: space-around; /*even spacing between images */
   align-items: center;
