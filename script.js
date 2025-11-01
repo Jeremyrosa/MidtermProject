@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => { // checks that html page h
   loadMatches(); //load matches from localStorage
   upcomingMatchesCountdown(); // function starts countdowns for existing dates
 });
+
 // Save matches to localStorage
 function saveMatch(teamA, teamB, matchTime){
   let matches = JSON.parse(localStorage.getItem("matches")) || [];
@@ -18,9 +19,9 @@ function saveMatch(teamA, teamB, matchTime){
 // Loads saved matches from localStorage
 function loadMatches(){
   let matches = JSON.parse(localStorage.getItem("matches")) || [];
-  //adds to table
-  for(let match of matches) {
-    const tableBody = document.getElementById("matchTable").getElementsByTagName("tbody")[0];
+  const tableBody = document.getElementById("matchTable").getElementsByTagName("tbody")[0];
+
+  for (let match of matches) {
     const newRow = document.createElement("tr");
     newRow.className = "upcoming";
     newRow.classList.add("user-added");
@@ -38,22 +39,20 @@ function loadMatches(){
     });
 
     statusCell.textContent = "Upcoming";
-    const countdownId = "countdown_" + Date.now();
+
+    const countdownId = "countdown_" + match.matchTime;
     countdownCell.id = countdownId;
 
-    startCountdown(dates, countdownId, newRow, statusCell);
-
-    const rows = Array.from(tableBody.rows);
-    let inserted = false;
-    for (let r of rows) {
-      if (r.classList.contains("completed")) {
-        tableBody.insertBefore(newRow, r);
-        inserted = true;
-        break;
-      }
+    if (dates.getTime() < Date.now()) {
+      markAsCompleted(newRow, statusCell, countdownCell);
+    } else {
+      startCountdown(dates, countdownId, newRow, statusCell);
     }
+
+    tableBody.appendChild(newRow);
   }
 }
+
 
 function addMatch() { // creates new rows with new match dates
   //input values
