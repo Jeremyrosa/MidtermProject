@@ -70,7 +70,7 @@ body {
   padding: 10px 0;       /* adjusts vertical spacing */
   box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
   z-index:1000;
-  background: linear-gradient(to top, #1b1b1d, #585872);
+  background: linear-gradient(to bottom, #1b1b1d, #585872);
   }
 
 /* Style for each image in the bottom bar */
