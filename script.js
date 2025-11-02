@@ -45,14 +45,19 @@ function loadMatches(){
     const countdownId = "countdown_" + match.matchTime;
     countdownCell.id = countdownId;
 
-    // for past dates added/completed
-    if (dates.getTime() < Date.now()) {
-      // mark as completed if past
-      markAsCompleted(newRow, statusCell, countdownCell);
-    } else {
-      // start countcountdown for future dates
+    // place user-added matches in order
+    if (now >= matchEnd) {
+      markAsCompleted(newRow, statusCell, countdownCell);  //  Match finished
+    } else if (now >= matchStart && now < matchEnd) {
+      newRow.classList.remove("upcoming");   // Match currently ongoing
+      newRow.classList.add("ongoing");
+      statusCell.textContent = "Ongoing";
+      countdownCell.textContent = "Ongoing";
       startCountdown(dates, countdownId, newRow, statusCell);
+    } else {
+      startCountdown(dates, countdownId, newRow, statusCell); // Match upcoming
     }
+    
     // Insert matches above completed matches
     const rows = Array.from(tableBody.rows);
     let inserted = false;
@@ -68,7 +73,6 @@ function loadMatches(){
     }
   }
 }
-
 
 function addMatch() { // creates new rows with new match dates
   //input values
