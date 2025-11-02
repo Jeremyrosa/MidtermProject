@@ -45,6 +45,10 @@ function loadMatches(){
     const countdownId = "countdown_" + match.matchTime;
     countdownCell.id = countdownId;
 
+    const now = Date.now();
+    const matchStart = dates.getTime();
+    const matchEnd = matchStart + 90 * 60 * 1000; // 90 minutes after start
+
     // place user-added matches in order
     if (now >= matchEnd) {
       markAsCompleted(newRow, statusCell, countdownCell);  //  Match finished
