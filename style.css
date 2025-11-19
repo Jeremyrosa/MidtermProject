@@ -22,6 +22,20 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
+button {
+  width: 100pt;
+  height: 30pt;
+  border-radius: 6pt;
+}
+
+input{
+  height: 20pt;
+  width: 150pt;
+  margin: 5pt;
+  padding: 5px 10px;
+  border-radius: 6pt;
+}
+
 /* so content isn't hidden under fixed header */
 body {
   margin-top: 115px;
