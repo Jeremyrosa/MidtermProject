@@ -21,4 +21,9 @@ CREATE TABLE matches(
     team_b VARCHAR(50) NOT NULL,
     match_date DATETIME NOT NULL,
     match_status VARCHAR(50) ENUM('Upcoming','Ongoing','Completed') DEFAULT 'Upcoming'
+    winner INT DEFAULT NULL,
+    FOREIGN KEY (team_a_id) REFERENCES teams(teamid), -- refers to team's table id
+    FOREIGN KEY (team_b_id) REFERENCES teams(teamid),
+    FOREIGN KEY (winner_id) REFERENCES teams(teamid)
 );
+
