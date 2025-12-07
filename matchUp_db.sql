@@ -12,7 +12,7 @@ CREATE TABLE users(
 CREATE TABLE admin(
     adminid INT AUTO_INCREMENT PRIMARY KEY,
     admin_email VARCHAR(100) NOT NULL UNIQUE,
-    username VARCHAR(50) NOT NULL,
+    username VARCHAR(50) NOT NULL UNIQUE,
     adminpw VARCHAR(50) NOT NULL
 );
 
@@ -23,7 +23,7 @@ CREATE TABLE teams(
 );
 
 CREATE TABLE matches(
-    macthid INT AUTO_INCREMENT PRIMARY KEY,
+    matchid INT AUTO_INCREMENT PRIMARY KEY,
     team_a_id INT NOT NULL,
     team_b_id INT NOT NULL,
     match_date DATETIME NOT NULL,
