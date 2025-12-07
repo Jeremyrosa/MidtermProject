@@ -1,5 +1,5 @@
 document.getElementById("loginForm").addEventListener("submit", function(event) {
-    let email = document.getElementById("username").value;
+    let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
 
     fetch("login.php", {
@@ -14,8 +14,11 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     .then(data => {
         if (data.success) {
             alert("Login successful.");
+            // window.location.href = "homepage.html"; // page redirection
         } else {
             alert("Invalid username or password.");
         }
     })
+
+    .catch(error => console.error("Error:", error));
 });
