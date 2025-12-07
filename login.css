@@ -1,0 +1,71 @@
+/* login.css */
+
+/* Login page background */
+body.login-page {
+  background-image: url('backg2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Login container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Login form box */
+.login-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 400px;
+  text-align: center;
+}
+
+.login-form h1 {
+  margin-bottom: 0.5rem;
+  color: black;
+  font-size: 50px;
+}
+
+/* Form fields */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+  color: black;
+  font-family: 'Carter One', sans-serif;
+}
+
+.form-group input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Carter One', sans-serif;
+}
+
+/* Buttons inside login form */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.buttons p {
+  font-size: 20px;
+}
+
+.login {
+  background-color: #80A1E9;
+  color: #fff;
+}
