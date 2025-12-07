@@ -25,7 +25,7 @@ if ($stmt->num_rows === 0) {
 $stmt->bind_result($db_password);
 $stmt->fetch();
 
-if (password_verify($password, $db_password)) {
+if ($password === $db_password) {
     echo json_encode(["success" => true, "message" => "Login successful."]);
 } else {
     echo json_encode(["success" => false, "message" => "Incorrect password."]);
