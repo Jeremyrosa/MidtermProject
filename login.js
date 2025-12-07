@@ -1,6 +1,6 @@
 document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault();
-    
+
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
 
@@ -16,7 +16,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     .then(data => {
         if (data.success) {
             alert("Login successful.");
-            // window.location.href = "homepage.html"; // page redirection
+            window.location.href = "index.html"; // upcoming matches page
         } else {
             alert("Invalid username or password.");
         }
