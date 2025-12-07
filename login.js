@@ -1,7 +1,7 @@
 document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    let username = document.getElementById("username").value;
+    let username = document.getElementById("username").value.trim();
     let password = document.getElementById("password").value.trim();
 
     fetch("login.php", {

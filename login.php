@@ -3,7 +3,7 @@ header("Content-Type: application/json");
 $data = json_decode(file_get_contents("php://input"), true);
 
 $username = trim($data["username"]);
-$password = $data["password"];
+$password = trim($data["password"]);
 
 $conn = new mysqli("localhost", "root", "", "Match_Up");
 
@@ -26,7 +26,7 @@ $stmt->bind_result($db_password);
 $stmt->fetch();
 
 if (password_verify($password, $db_password)) {
-    echo json_encode(["success" => true, "message" => "User not found."]);
+    echo json_encode(["success" => true, "message" => "Login successful."]);
 } else {
     echo json_encode(["success" => false, "message" => "Incorrect password."]);
 }
