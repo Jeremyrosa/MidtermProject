@@ -7,14 +7,25 @@
         <script type="module" crossorigin src="https://widgets.api-sports.io/3.1.0/widgets.js"></script>
     </head>
     <body>
+        <header>
+            <nav class="navbar">
+              <div class="logo">Match Hub</div>
+              <ul class="nav-links">
+                <li><a href="teamPage.html">TEAMS</a></li>
+                <li><a href="leaderBoard.html">LEADERBOARD</a></li>
+              </ul>
+              <input type="text" class="search-bar" placeholder="Search..." />
+            </nav>
+          </header>
         <h1>Team Page</h1>
+
         <table>
             
         </table>
 
         <api-sports-widget data-type="teams"></api-sports-widget>
 
-    <api-sports-widget
+        <api-sports-widget
         data-type="config"
         data-key="9dacac3e3a9a76dda5da54c523c99bca"
         data-sport="football"
