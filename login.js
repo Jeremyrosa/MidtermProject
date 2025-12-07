@@ -15,7 +15,6 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            alert("Login successful.");
             window.location.href = "upcomingGames.html";
         } else {
             alert(data.message || "Invalid username or password.");
