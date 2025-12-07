@@ -1,0 +1,100 @@
+/*   Dark mode stying  */
+body {
+  background-color: #2b2c35;  /*  gray background */
+  color: #ffffff;             /* white text for contrast */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0 20px;
+  padding-bottom: 8px;   /* padding for bottom bar */
+}
+
+/*  header color section  */
+header {
+  background-color: #1b1b1d;  /*  black */
+  color: #ffffff;
+  text-align: left;
+  padding: 3px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+button {
+  width: 100pt;
+  height: 30pt;
+  margin-left: 10pt;
+  border-radius: 6pt;
+  border-color: #cce5ff;
+  background-color: #cce5ff;
+  transition: all 0.3s ease;
+}
+
+button:hover{transform:scale(1.2)}
+
+input{
+  height: 20pt;
+  width: 150pt;
+  margin: 5pt;
+  padding: 5px 10px;
+  border-radius: 6pt;
+}
+
+/* so content isn't hidden under fixed header */
+body {
+  margin-top: 115px;
+}
+
+
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+  }
+  th, td {
+    padding: 12px;
+    border: 1px solid #9a9a9a;
+    text-align: center;
+  }
+  .upcoming {
+    background-color: #cce5ff; /* bright blue */
+    color: #003366;
+    font-weight: bold;
+  }
+  .ongoing {
+    background-color: #d4edda; /* bright green */
+    color: #155724;
+    font-weight: bold;
+  }
+  .completed {
+    background-color: #474b4f; /* light grey */
+    color: #ffffff;
+    font-style: italic;
+  }
+
+/* Bottom bar shown on bottom of screen */
+  .bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 60px;
+  background-color: #48474D;
+  display: flex;
+  justify-content: space-around; /*even spacing between images */
+  align-items: center;
+  padding: 10px 0;       /* adjusts vertical spacing */
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  z-index:1000;
+  background: linear-gradient(to bottom, #1b1b1d, #585872, #1b1b1d);
+  }
+
+/* Style for each image in the bottom bar */
+  .bottom-bar img {
+  width: 40px;
+  height: 40px;
+  }

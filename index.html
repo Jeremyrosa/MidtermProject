@@ -1,100 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Match Up</title>
-  <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Match Hub</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Carter+One" rel="stylesheet">
+  <style>
+    body{
+      font-family: 'Carter One', sans-serif;
+    }
+  </style>
 </head>
 <body>
-  <!-- HEADER SECTION: shows small logo next to the title -->
-   <header>
-<h1>
-   <img src="images/logotest1.2.png" 
-     alt="Logo" 
-     style="width:30px; vertical-align:middle;">
- 
-  Match Up
-</h1>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Match Hub</div>
+      <ul class="nav-links">
+        <li><a href="teamPage.html">TEAMS</a></li>
+        <li><a href="leaderBoard.html">LEADERBOARD</a></li>
+      </ul>
+      <input type="text" class="search-bar" placeholder="Search..." />
+    </nav>
   </header>
 
-  <form id="matchForm">
-    <input type="text" id="teamA" placeholder="Team A" required autofocus>
-    <input type="text" id="teamB" placeholder="Team B" required>
-    <input type="datetime-local" id="matchTime" required>
-    <button type="submit">Add Match</button>
-    <!--Button to clear saved matches from localStorage-->
-    <button id="clearMatches" onclick="clearAllMatches()">Clear All Matches</button>
-  </form>
-
-  <table id="matchTable">
-  <thead>
-    
-    <tr>
-      <th>TEAMS</th>
-      <th>KICKOFF</th>
-      <th>COUNTDOWN</th>
-      <th>STATUS</th>
-    </tr>
-
-  </thead>
-  <tbody>
-
-    <tr class="upcoming">
-      <td>Team1 vs Team2</td>
-      <td>November 20, 2025 – 3:00 PM</td>
-      <td></td>
-      <td>Upcoming</td>
-    </tr>
-
-    <tr class="upcoming">
-      <td>Team7 vs Team8</td>
-      <td>December 10, 2025 – 5:05 PM</td>
-      <td></td>
-      <td>Upcoming</td>
-    </tr>
-
-    <tr class="upcoming">
-      <td>Team1 vs Team4</td>
-      <td>December 25, 2025 – 12:00 PM</td>
-      <td></td>
-      <td>Upcoming</td>
-    </tr>
-
-    <!---- Code any past dates below this point -->
-    <tr class="completed">
-      <td>Team9 vs Team10</td>
-      <td>October 5, 2025 – 1:00 PM</td>
-      <td>Completed</td>
-      <td>Completed</td>
-    </tr>
-
-    <tr class="completed">
-      <td>Team5 vs Team6</td>
-      <td>October 10, 2025 – 2:00 PM</td>
-      <td>Completed</td>
-      <td>Completed</td>
-    </tr>
-
-    <tr class="upcoming">
-      <td>Team3 vs Team4</td>
-      <td>October 15, 2025 – 5:00 PM</td>
-      <td></td>
-      <td>Upcoming</td>
-    </tr>
-
-  </tbody>
-</table>
+  <main class="home">
+    <div class="home-text">
+      <h1>Welcome to Match Hub</h1>
+      <p>Track your soccer matches here!</p>
+      <div class="buttons">
+        <button class="btn register" onclick="window.location.href='register.html'">Register</button>
+        <button class="btn login" onclick="window.location.href='login.html'">Log In</button>
+      </div>
+    </div>
+  </main>
 </body>
-
-<!--Bottom section with four silhouette soccer players-->
-  <div class="bottom-bar">
-    <img src="images/girl6.png" alt="Soccer Player 1">
-    <img src="images/girl2.png" alt="Soccer Player 2">
-    <img src="images/boy1.png" alt="Soccer Player 3">
-    <img src="images/boy2.png" alt="Soccer Player 4">
-  </div>
-
-  
-<script src="index.js"></script>
-
 </html>
