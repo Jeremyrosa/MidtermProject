@@ -42,10 +42,3 @@ CREATE TABLE scores(
     last_match_score INT DEFAULT 0,
     FOREIGN KEY (team_id) REFERENCES teams(teamid)
 );
-
--- test 
-INSERT INTO teams VALUES
-(1, 'FC Barcelona')
-(2, 'Argentina')
-(3, 'Portugal')
-(4, 'Santos FC')
