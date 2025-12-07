@@ -18,8 +18,21 @@ $stmt->execute();
 $stmt->store_result();
 
 if ($stmt->num_rows === 0) {
-    echo json_encode(["success" => false, "message" => "User not found"]);
-    exit();
+    $stmt = $conn->prepare("SELECT adminpw FROM admin WHERE username = ?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $stmt->store_result();
+
+    if ($stmt->num_rows === 0) {
+        echo json_encode(["success" => false, "message" => "User not found"]);
+        exit();
+    } else {
+        $stmt->bind_result($db_password);
+        $stmt->fetch();
+    }
+} else {
+    $stmt->bind_result($db_password);
+    $stmt->fetch();
 }
 
 $stmt->bind_result($db_password);
