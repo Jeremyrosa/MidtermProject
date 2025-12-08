@@ -23,7 +23,9 @@ document.getElementById("regForm").addEventListener("submit", function(e) {
             localStorage.setItem("loggedIn", "true");
             window.location.href = "teamPage.html";
         } else {
-            alert(data.message);
+            alert(data.message || "Registration failed.");
         }
     })
+    
+    .catch(error => console.error("Error:", error));
 });
