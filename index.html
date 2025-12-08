@@ -45,6 +45,17 @@
           window.location.href = "login.html";
       }
     }
+
+    const buttonsDiv = document.getElementById("home-buttons");
+
+    if (localStorage.getItem("loggedIn") === "true") {
+        buttonsDiv.innerHTML = `<button class="btn logout" onclick="logout()">Logout</button>`;
+    }
+
+    function logout() {
+        localStorage.removeItem("loggedIn");
+        window.location.href = "index.html";
+    }
   </script>
 </body>
 </html>
