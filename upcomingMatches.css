@@ -1,7 +1,11 @@
 /*   Dark mode stying  */
 body {
   background-image: url('images/backgr3.png'); 
-  background-color: #2b2c35;  /*  gray background */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
   color: #ffffff;             /* white text for contrast */
   font-family: Arial, sans-serif;
   margin: 0;
