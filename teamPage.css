@@ -228,4 +228,10 @@ body {
   display: block;
 }
 
+api-sports-widget img {
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
 
