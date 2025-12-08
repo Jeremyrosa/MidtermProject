@@ -79,6 +79,10 @@ tr:hover {
     font-family: 'Segoe UI', sans-serif;
 }
 
+.navbar {
+  width: 100%;
+  z-index: 1000;
+}
 
 
 
