@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Match Up</title>
-  <link rel="stylesheet" href="upcomingMatches.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Match Hub</title>
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="upcomingMatches.css" />
+  <link href="https://fonts.googleapis.com/css?family=Carter+One" rel="stylesheet">
+  <style>
+    body{
+      font-family: 'Carter One', sans-serif;
+    }
+  </style>
 </head>
 <body>
-  <!-- HEADER SECTION: shows small logo next to the title -->
-   <header>
-<h1>
-   <img src="images/logotest1.2.png" 
-     alt="Logo" 
-     style="width:30px; vertical-align:middle;">
- 
-  Match Up
-</h1>
-  </header>
+  <header>
+  <nav class="navbar">
+    <a href="index.html" class="logo"></a>
+      <img src="images/logotest1.2.png" alt="Logo" style="width:30px; vertical-align:middle;">
+      Match Hub
+    </div>
+    <ul class="nav-links">
+      <li><a href="teamPage.html">TEAMS</a></li>
+      <li><a href="leaderBoard.html">LEADERBOARD</a></li>
+      <li><a href="upcomingMatches.html">MATCHES</a></li>
+    </ul>
+    <input type="text" class="search-bar" placeholder="Search..." />
+  </nav>
+</header>
 
   <form id="matchForm">
     <input type="text" id="teamA" placeholder="Team A" required autofocus>
