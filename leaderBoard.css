@@ -136,6 +136,12 @@ api-sports-widget img {
   object-fit: contain;
 }
 
+api-sports-widget table {
+  background: transparent;
+  color: inherit;
+}
+
+
 
 
 
