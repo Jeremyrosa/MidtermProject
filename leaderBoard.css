@@ -1,0 +1,72 @@
+body {
+  font-family: 'Carter One', sans-serif;
+  background: darkgray;
+  margin: 0;
+  padding: 20px;
+  background-image: url('images/backgr3_.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+table {
+  width: 95%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: #17305B;
+  color: #fff;
+}
+
+tr:hover {
+  background: #f1f1f1;
+}
+
+.team-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.team-logo {
+  width: 30px;
+  height: 30px;
+}
+
+.form {
+    margin-top: 10px;
+}
+
+.form span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 50%;
+    margin: 2px;
+    font-size: 13px;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.W { background: #2ecc71; }
+.D { background: #f39c12; }
+.L { background: #e74c3c; }
