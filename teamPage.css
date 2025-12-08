@@ -192,7 +192,7 @@ body {
   margin-bottom: 20px;
 }
 
-.API-containers table{
+.API-containers {
   display:grid;
   grid-template-columns: 1fr 1.2fr 1.2fr;
   gap: 20px;
