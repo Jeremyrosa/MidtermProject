@@ -1,6 +1,6 @@
 /*   Dark mode stying  */
 body {
-  background-image: url('images/backgr3.png'); 
+  background-image: url('images/backgr4.png'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -46,7 +46,6 @@ input{
   margin: 5pt;
   padding: 5px 10px;
   border-radius: 6pt;
-  font-family: 'Carter One', sans-serif;
 }
 
 /* so content isn't hidden under fixed header */
@@ -67,7 +66,7 @@ body {
     border: 1px solid #9a9a9a;
     text-align: center;
     background-color: black;
-    
+    font-family: 'Carter One', sans-serif;
   }
 
   td {
@@ -91,22 +90,5 @@ body {
     font-style: italic;
   }
 
-.logo-title {
-  display: flex;
-  align-items: center;
-  gap: 8px; 
-  font-family: 'Carter One', sans-serif;
-}
-
-.logo-img {
-  width: auto;
-  height: auto;
-}
-
-.site-title {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-}
 
 
