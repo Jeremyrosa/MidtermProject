@@ -46,11 +46,12 @@
       }
     }
 
-    const buttonsDiv = document.getElementById("home-buttons");
-
-    if (localStorage.getItem("loggedIn") === "true") {
-        buttonsDiv.innerHTML = `<button class="btn logout" onclick="logout()">Logout</button>`;
-    }
+    document.addEventListener("DOMContentLoaded", function() {
+      const buttonsDiv = document.getElementById("home-buttons");
+      if (localStorage.getItem("loggedIn") === "true") {
+          buttonsDiv.innerHTML = `<button class="btn logout" onclick="logout()">Logout</button>`;
+      }
+    });
 
     function logout() {
         localStorage.removeItem("loggedIn");
