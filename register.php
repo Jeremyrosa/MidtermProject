@@ -25,6 +25,15 @@ if ($stmt->num_rows > 0) {
 
 $stmt->close();
 
+$stmt = $conn->prepare("INSERT INTO users (email, username, userpw) VALUES (?, ?, ?)");
+$stmt->bind_param("sss", $email, $username, $password);
+
+if ($stmt->execute()) {
+    echo json_encode(["success" => true, "message" => "Registration successful."]);
+} else {
+    echo json_encode(["success" => false, "message" => "Registration failed. Please try again."]);
+}
+
 $stmt->close();
 $conn->close();
 ?>
