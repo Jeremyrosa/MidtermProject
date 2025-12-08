@@ -192,4 +192,40 @@ body {
   margin-bottom: 20px;
 }
 
+.API-container {
+  display:grid;
+  grid-template-columns: 1fr 1.2fr 1.2fr;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1400px;
+  margin: auto
+}
+
+.box {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sticky {
+  position: sticky;
+  top: 80px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+.box api-sports-widget {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 
