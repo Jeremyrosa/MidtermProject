@@ -30,7 +30,7 @@
       <h1>Welcome to </h1>
       <h2>Match Hub</h2>
       <p>Track your soccer matches here!</p>
-      <div class="buttons">
+      <div class="buttons" id="home-buttons">
         <button class="btn register" onclick="window.location.href='register.html'">Register</button>
         <button class="btn login" onclick="window.location.href='login.html'">Log In</button>
       </div>
@@ -46,17 +46,17 @@
       }
     }
 
-    document.addEventListener("DOMContentLoaded", function() {
-      const buttonsDiv = document.getElementById("home-buttons");
-      if (localStorage.getItem("loggedIn") === "true") {
-          buttonsDiv.innerHTML = `<button class="btn logout" onclick="logout()">Logout</button>`;
-      }
-    });
-
     function logout() {
         localStorage.removeItem("loggedIn");
         window.location.href = "index.html";
     }
+
+    const buttonsDiv = document.getElementById("home-buttons");
+    document.addEventListener("DOMContentLoaded", function() {
+      if (localStorage.getItem("loggedIn") === "true") {
+          buttonsDiv.innerHTML = `<button class="btn logout" onclick="logout()">Logout</button>`;
+      }
+    });
   </script>
 </body>
 </html>
