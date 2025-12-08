@@ -14,9 +14,9 @@
     <nav class="navbar">
       <a href="index.html" class="logo">Match Hub</a>
       <ul class="nav-links">
-        <li><a href="teamPage.html">TEAMS</a></li>
-        <li><a href="leaderBoard.html">LEADERBOARD</a></li>
-        <li><a href="upcomingMatches.html">MATCHES</a></li>
+        <li><a href="#" onclick="goProtected('teamPage.html')">TEAMS</a></li>
+        <li><a href="#" onclick="goProtected('leaderBoard.html')">LEADERBOARD</a></li>
+        <li><a href="#" onclick="goProtected('upcomingMatches.html')">MATCHES</a></li>
       </ul>
       <input type="text" class="search-bar" placeholder="Search..." />
     </nav>
@@ -54,5 +54,13 @@
   </main>
 </body>
 
-<script src="register.js"></script>
+<script src="register.js">
+  function goProtected(page) {
+    if (localStorage.getItem("loggedIn") === "true") {
+        window.location.href = page;
+    } else {
+        window.location.href = "login.html";
+    }
+  }
+</script>
 </html>
