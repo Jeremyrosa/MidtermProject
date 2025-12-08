@@ -56,14 +56,14 @@ body {
     margin-top: 20px;
     font-family: Arial, sans-serif;
   }
-  th{
+  th {
     padding: 12px;
     border: 1px solid #9a9a9a;
     text-align: center;
-    background-color: blue;
+    background-color: black;
   }
 
-  th {
+  td {
     padding: 12px;
     border: 1px solid #9a9a9a;
     text-align: center;
