@@ -19,8 +19,8 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 30px;
-  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-top: 30px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   font-weight: 100;
 }
@@ -38,6 +38,7 @@ th, td {
   text-align: center;
   border-bottom: 1px solid #ddd;
   color: black;
+  font-weight: 100;
 }
 
 th {
@@ -77,6 +78,7 @@ tr:hover {
     color: #fff;
     font-family: 'Segoe UI', sans-serif;
 }
+
 
 
 
