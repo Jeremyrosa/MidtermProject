@@ -1,6 +1,6 @@
 /*   Dark mode stying  */
 body {
-  background-image: url('images/backgr4.png'); 
+  background-image: url('images/backgr3.png'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -60,6 +60,7 @@ body {
     border-collapse: collapse;
     margin-top: 20px;
     font-family: 'Carter One', sans-serif;
+    font-weight: 100px;
   }
   th {
     padding: 12px;
