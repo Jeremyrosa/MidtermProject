@@ -1,5 +1,6 @@
 /*   Dark mode stying  */
 body {
+  background-image: url('images/backgr3.png'); 
   background-color: #2b2c35;  /*  gray background */
   color: #ffffff;             /* white text for contrast */
   font-family: Arial, sans-serif;
@@ -55,7 +56,14 @@ body {
     margin-top: 20px;
     font-family: Arial, sans-serif;
   }
-  th, td {
+  th{
+    padding: 12px;
+    border: 1px solid #9a9a9a;
+    text-align: center;
+    background-color: blue;
+  }
+
+  th {
     padding: 12px;
     border: 1px solid #9a9a9a;
     text-align: center;
