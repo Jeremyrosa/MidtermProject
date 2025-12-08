@@ -27,6 +27,7 @@ th, td {
   padding: 12px;
   text-align: center;
   border-bottom: 1px solid #ddd;
+  color: black;
 }
 
 th {
@@ -66,4 +67,5 @@ tr:hover {
     color: #fff;
     font-family: 'Segoe UI', sans-serif;
 }
+
 
