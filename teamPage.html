@@ -248,17 +248,60 @@
 
     </div>
 
-        <api-sports-widget data-type="teams"></api-sports-widget>
+    <div class="API-containers">
 
-        <api-sports-widget
-        data-type="config"
-        data-key="9dacac3e3a9a76dda5da54c523c99bca"
-        data-sport="football"
-        data-lang="en"
-        data-theme="black"
-        data-show-errors="true"
-        data-favorite="true">
+      <!-- Left Container: Leagues-->
+      <div class="box" id="leagues-list">
+        <api-sports-widget data-type="leagues"></api-sports-widget>
+      </div>
+
+      <!-- Center Container: (MSL) Games-->
+      <div class="box" id="league-list">
+        <api-sports-widget data-type="league"
+          data-league="253">
+        </api-sports-widget>
+      </div>
+
+      <!-- Right Containers: -->
+       <div class="right-column">
+
+        <!-- Team -->
+        <div class="box" id="team-list">
+          <api-sports-widget data-type="team"
+            data-team-squad="true"
+            data-team-statistics="true">
+          </api-sports-widget>
+
+          <!-- Game -->
+          <div class="box sticky" id="game-list">
+            <api-sports-widget data-type="game"></api-sports-widget>
+          </div>
+
+       </div>
+      
+    </div>
+
+    <api-sports-widget
+      data-type="config"
+      data-sport="football"
+      data-key="9dacac3e3a9a76dda5da54c523c99bca"
+      data-lang="en"
+      data-theme="dark"
+      data-show-errors="true"
+      data-refresh="20"
+      data-show-logos="true"
+      data-favorite="true"
+
+      data-team-squad="true"
+      data-team-statistics="true"
+      data-games-style="2"
+
+      data-target-league="#league-list"
+      data-target-team="#team-content"
+      data-target-game="#game-content">
     </api-sports-widget>
+
+        
    </main>
   </body>
 </html>
