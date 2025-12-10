@@ -1,7 +1,7 @@
 
 /* Register page background */
 body.reg-page {
-  background-image: url('images/backgr2.png'); 
+  background-image: url('images/bg2.png'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -89,5 +89,6 @@ body.reg-page {
   background-color: #80A1E9;
   color: #fff;
 }
+
 
 

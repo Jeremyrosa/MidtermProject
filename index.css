@@ -2,7 +2,7 @@
 /* Home page background */
 body {
   height: 100vh;
-  background-image: url('images/backgr1.png'); 
+  background-image: url('images/bg1.png'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -55,6 +55,7 @@ body {
   color: white;
   font-weight: 100;
 }
+
 
 
 
