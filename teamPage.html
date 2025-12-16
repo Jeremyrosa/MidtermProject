@@ -317,23 +317,18 @@
     const teamCards = document.querySelectorAll(".team-card");
 
     if (localStorage.getItem("loggedIn") !== "true") {
-      searchBar.disabled = true;
-      searchBar.placeholder = "Login to search teams";
+      searchBar.style.display = "block";
+    } else {
+      searchBar.style.display = "none";
     }
 
     searchBar.addEventListener("input", function () {
-      if (localStorage.getItem("loggedIn") !== "true") return;
-      
+
       const searchValue = searchBar.value.toLowerCase();
 
       teamCards.forEach(card => {
         const teamName = card.querySelector(".team-name").textContent.toLowerCase();
-
-        if (teamName.includes(searchValue)) {
-          card.style.display = "block";
-        } else {
-          card.style.display = "none";
-        }
+        card.style.display = teamName.includes(searchValue) ? "block" : "none";
       });
     });
   </script>
