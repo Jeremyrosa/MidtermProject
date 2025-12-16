@@ -319,6 +319,9 @@
     searchBar.addEventListener("input", function () {
       const searchValue = searchBar.value.toLowerCase();
 
+      teamCards.forEach(card => {
+        const teamName = card.querySelector(".team-name").textContent.toLowerCase();
+      });
     });
   </script>
 
