@@ -16,7 +16,7 @@ CREATE TABLE admin(
     adminpw VARCHAR(300) NOT NULL
 );
 
-CREATE USER 'matchup_user'@'localhost' INDENTIFIED BY 'secure_password';
+CREATE USER 'matchup_user'@'localhost' IDENTIFIED BY 'secure_password';
 
 GRANT SELECT, INSERT, UPDATE, DELETE
 ON Match_Up.*
