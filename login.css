@@ -76,7 +76,7 @@ body.login-page {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #111;
+  background-image: url('images/splashbg.png');
   color: white;
   display: flex;
   justify-content: center;
@@ -91,6 +91,7 @@ body.login-page {
   opacity: 0;
   pointer-events: none;
 }
+
 
 
 
