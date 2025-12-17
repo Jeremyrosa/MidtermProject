@@ -29,3 +29,17 @@ document.getElementById("regForm").addEventListener("submit", function(e) {
     
     .catch(error => console.error("Error:", error));
 });
+
+// Splash screen
+window.addEventListener("load", () => {
+  const splash = document.getElementById("splash");
+
+  setTimeout(() => {
+    splash.classList.add("fade-out");
+
+    setTimeout(() => {
+      splash.style.display = "none";
+    }, 800);
+  }, 2000); // splash visible for 2 seconds
+});
+
