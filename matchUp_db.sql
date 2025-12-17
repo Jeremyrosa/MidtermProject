@@ -15,29 +15,3 @@ CREATE TABLE admin(
     admin_username VARCHAR(50) NOT NULL UNIQUE,
     adminpw VARCHAR(50) NOT NULL
 );
-
-CREATE TABLE teams(
-    teamid INT AUTO_INCREMENT PRIMARY KEY,
-    team_name VARCHAR(50) NOT NULL
-);
-
-CREATE TABLE matches(
-    matchid INT AUTO_INCREMENT PRIMARY KEY,
-    team_a_id INT NOT NULL,
-    team_b_id INT NOT NULL,
-    match_date DATETIME NOT NULL,
-    match_status ENUM('Upcoming','Ongoing','Completed') DEFAULT 'Upcoming',
-    winner_id INT DEFAULT NULL,
-    FOREIGN KEY (team_a_id) REFERENCES teams(teamid),
-    FOREIGN KEY (team_b_id) REFERENCES teams(teamid),
-    FOREIGN KEY (winner_id) REFERENCES teams(teamid)
-);
-
-CREATE TABLE scores(
-    scoreid INT AUTO_INCREMENT PRIMARY KEY,
-    team_id INT NOT NULL,
-    total_wins INT DEFAULT 0,
-    total_losses INT DEFAULT 0,
-    last_match_score INT DEFAULT 0,
-    FOREIGN KEY (team_id) REFERENCES teams(teamid)
-);
