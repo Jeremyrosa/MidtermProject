@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS Match_Up;
-CREATE DATABASE Match_Up;
-USE Match_Up;
+DROP DATABASE IF EXISTS Match_Hub;
+CREATE DATABASE Match_Hub;
+USE Match_Hub;
 
 CREATE TABLE users(
     userid INT AUTO_INCREMENT PRIMARY KEY,
@@ -15,3 +15,5 @@ CREATE TABLE admin(
     admin_username VARCHAR(50) NOT NULL UNIQUE,
     adminpw VARCHAR(50) NOT NULL
 );
+
+CREATE USER 'matchhub_user'@'localhost' INDENTIFIED BY 'secure_password';
