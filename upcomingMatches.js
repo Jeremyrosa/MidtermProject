@@ -42,7 +42,7 @@ function loadMatches(){
 
     timeCell.dataset.time = dates.getTime();
     statusCell.textContent = "Upcoming";
-    const countdownId = "countdown_" + match.matchTime;
+    const countdownId = "countdown_" + Date.now() + "_" + Math.floor(Math.random() * 1000);
     countdownCell.id = countdownId;
 
     const now = Date.now();
@@ -109,7 +109,7 @@ function addMatch() { // creates new rows with new match dates
   statusCell.textContent = "Upcoming"; // content inside status cell
 
   // ID for each countdown cell so that multiple countdowns can run at the same time
-  const countdownId = "countdown_" + Date.now();
+  const countdownId = "countdown_" + Date.now() + "_" + Math.floor(Math.random() * 1000);
   countdownCell.id = countdownId;
 
   // if match time already passed, mark completed instantly
@@ -159,7 +159,7 @@ function startCountdown(targetDate, countdownId, row, statusCell) { // function 
       row.classList.add("ongoing");
       statusCell.textContent = "Ongoing";
 
-      const ongoingLeft = matchDuration - (now - countDownTime);
+      const ongoingLeft = Math.max(matchDuration - (now - countDownTime), 0);
       const minutes = Math.floor((ongoingLeft % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((ongoingLeft % (1000 * 60)) / 1000);
 
@@ -207,12 +207,13 @@ function upcomingMatchesCountdown() { // identifies which rows are "upcoming"
       const countdownCell = row.cells[2];
       const statusCell = row.cells[3];
 
+      const dates = new Date(timeCell.textContent);
+
       // creates ID for each cell to know where to display time
       const countdownId = "countdown_" + Math.floor(Math.random() * 100000);
       countdownCell.id = countdownId;
 
       // converts "kickoff" to readable date
-      let dates;
       if (timeCell.dataset.time) {
         dates = new Date(parseInt(timeCell.dataset.time));
       } else {
