@@ -6,7 +6,7 @@ let cachedMatches = [];
 let currentTab = "all";
 let countdownInterval = null;
 
-/* ---------------- FETCH MATCHES ---------------- */
+/* Fetch Matches */
 fetch(`https://v3.football.api-sports.io/fixtures?league=${LEAGUE_ID}&season=${SEASON}`, {
   headers: { "x-apisports-key": API_KEY }
 })
@@ -16,7 +16,7 @@ fetch(`https://v3.football.api-sports.io/fixtures?league=${LEAGUE_ID}&season=${S
   renderMatches();
 });
 
-/* ---------------- FAVORITES ---------------- */
+/* Favorites */
 function getFavorites() {
   return JSON.parse(localStorage.getItem("favorites")) || [];
 }
@@ -34,7 +34,7 @@ function toggleFavorite(matchId, checked) {
   renderMatches();
 }
 
-/* ---------------- TABS ---------------- */
+/* Tabs */
 function switchTab(tab) {
   currentTab = tab;
 
@@ -49,7 +49,7 @@ function switchTab(tab) {
   renderMatches();
 }
 
-/* ---------------- RENDER MATCH LIST ---------------- */
+/* Render Matches */
 function renderMatches() {
   const list = document.getElementById("matches-list");
   const favorites = getFavorites();
@@ -91,7 +91,7 @@ function renderMatches() {
   });
 }
 
-/* ---------------- VIEW MATCH DETAILS ---------------- */
+/* View Matche Details */
 function viewMatch(matchId) {
   const match = cachedMatches.find(m => m.fixture.id === matchId);
   if (!match) return;
@@ -146,7 +146,7 @@ function viewMatch(matchId) {
   startCountdown(kickoff);
 }
 
-/* ---------------- COUNTDOWN ---------------- */
+/* Countdown */
 function startCountdown(kickoffTime) {
   const countdownEl = document.getElementById("countdown-timer");
 
