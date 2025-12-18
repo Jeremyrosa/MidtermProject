@@ -23,11 +23,11 @@
     </nav>
 </header>
 
-    <h2>Major Soccer League (MSL) Matches </h2>
     <div class="page-container">
 
         <!-- Left side: Match lists/Favorites -->
         <div class="left-panel">
+            <h2>Major Soccer League (MSL) Matches </h2>
             <div class="tabs">
                 <button class="tab active" onclick="switchTab('all')">All</button>
                 <button class="tab" onclick="switchTab('favorites')">Favorites</button>
