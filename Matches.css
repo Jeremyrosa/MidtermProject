@@ -7,7 +7,6 @@ body {
     color: white;
 }
 
-
 /* Page split */
 .page-container {
     display: grid;
@@ -21,7 +20,7 @@ body {
 /* Panels */
 .left-panel,
 .right-panel {
-    background: #1f2937;
+    background: rgba(31, 41, 55, 0.85);
     border-radius: 8px;
     padding: 16px;
 }
