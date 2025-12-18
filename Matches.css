@@ -20,7 +20,7 @@ body {
 /* Panels */
 .left-panel,
 .right-panel {
-    background-image: url('images/bg1.png'); 
+    background: rgba(31, 41, 55, 0.85);
     border-radius: 8px;
     padding: 16px;
 }
