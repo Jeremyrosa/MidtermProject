@@ -24,6 +24,7 @@
 </header>
 
     <div class="page-container">
+        <h2> MSL Matches:</h2>
 
         <!-- Left side: Match lists/Favorites -->
         <div class="left-panel">
