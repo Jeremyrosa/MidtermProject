@@ -1,16 +1,31 @@
 # MidtermProject
 
 # Group Members
-# Elianny - JavaScript & SQL
-# Jeanne - HTML & CSS
-# Jeremy - HTML & CSS
-# Shari - JavaScript
+# Elianny Rodriguez - JavaScript, SQL, PHP
+# Jeanne Exantus - HTML, CSS, Presentation Materials
+# Shari Li - JavaScript
+# Jeremy Jimenez - HTML, CSS, Video Presentation, Project Integration
 
 # Git: clone https://github.com/Jeremyrosa/MidtermProject.git
-# phpMyAdmin run: http://localhost/MidtermProject/
-This project is a simple Soccer Match Tracker web application built using HTML, CSS, and JavaScript.
-It allows users to add, view, and track upcoming soccer matches with countdown timers until kickoff.
-#Each match is categorized as Upcoming, Ongoing, or Completed, with color highlights for easy tracking
 
-Logo test images were generateed using AI.
-Soccer player silhouette images were sourced from Pinterest. The original backgrounds for each silhouette image was cut out using Pixelcut AI.
+
+This project is a web-based Soccer Match Tracker application developed for CSIT 337.
+It allows users to register and log in, view real-world soccer data, favorite matches,
+and track upcoming games using countdown timers until kickoff.
+
+# Each match is categorized as Upcoming, Ongoing, or Completed
+# to provide a clear and organized tracking experience.
+
+# Technologies Used
+# HTML
+# CSS
+# JavaScript
+# PHP
+# MySQL
+# SQL
+
+# External API Used
+# Soccer / MLS API
+
+# Team Vote
+# Our team votes for the website SteelBeam
