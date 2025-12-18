@@ -2,7 +2,12 @@ body {
     background: #111827;
     color: white;
     font-family: Arial, sans-serif;
+    background-image: url('images/bg1.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
 
 /* Page split */
 .page-container {
