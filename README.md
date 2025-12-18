@@ -3,7 +3,7 @@
 # Group Members
 # Elianny Rodriguez - JavaScript, SQL, PHP
 # Jeanne Exantus - HTML, CSS, Presentation Materials
-# Shari Li - JavaScript
+# Shari Li - JavaScript, PHP
 # Jeremy Jimenez - HTML, CSS, Video Presentation, Project Integration
 
 # Git: clone https://github.com/Jeremyrosa/MidtermProject.git
@@ -29,3 +29,13 @@ and track upcoming games using countdown timers until kickoff.
 
 # Team Vote
 # Our team votes for the website SteelBeam
+
+API Used:
+www.api-football.com/documentation-v3#tag/Widgets
+
+Sources:
+www.geeksforgeeks.org/
+www.w3schools.com/
+
+
+
