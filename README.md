@@ -30,9 +30,7 @@ and track upcoming games using countdown timers until kickoff.
 # Our team votes for the website SteelBeam
 
 
-# Sources:
-www.geeksforgeeks.org/
-www.w3schools.com/
+# Sources: www.geeksforgeeks.org/, www.w3schools.com/
 
 
 
