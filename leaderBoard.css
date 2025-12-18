@@ -93,33 +93,7 @@ tr:hover {
   z-index: 1000;
 }
 
-.API-containers {
-  
-  padding: 20px;
-  margin: auto;
-  background: #1f2937
-}
 
-.box {
-  background: #1f2937;
-  border: 1px solid #374151;
-  border-radius: 8px;
-  padding: 0;
-  overflow: hidden;
-}
-
-.right-column {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.sticky {
-  position: sticky;
-  top: 80px;
-  max-height: calc(100vh - 100px);
-  overflow-y: auto;
-}
 
 .box api-sports-widget {
   width: 100%;
