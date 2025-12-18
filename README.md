@@ -29,10 +29,8 @@ and track upcoming games using countdown timers until kickoff.
 # Team Vote
 # Our team votes for the website SteelBeam
 
-API Used:
-www.api-football.com/documentation-v3#tag/Widgets
 
-#Sources:
+# Sources:
 www.geeksforgeeks.org/
 www.w3schools.com/
 
