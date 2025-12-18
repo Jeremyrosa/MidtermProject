@@ -138,7 +138,7 @@ function viewMatch(matchId) {
       </p>
 
       <p class="countdown">
-        ⏳ Kickoff in: <span id="countdown-timer"></span>
+        Kickoff in: <span id="countdown-timer"></span>
       </p>
     </div>
   `;
