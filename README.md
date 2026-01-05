@@ -1,4 +1,4 @@
-# MidtermProject
+# Class Project
 
 # Group Members
 # Elianny Rodriguez - JavaScript, SQL, PHP
@@ -6,7 +6,7 @@
 # Shari Li - JavaScript, PHP
 # Jeremy Jimenez - HTML, CSS, Video Presentation, Project Integration
 
-# Git: clone https://github.com/Jeremyrosa/MidtermProject.git
+# Git: clone https://github.com/Jeremyrosa/MatchHub..git
 
 This project is a web-based Soccer Match Tracker application developed for CSIT 337.
 It allows users to register and log in, view real-world soccer data, favorite matches,
