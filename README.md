@@ -8,7 +8,6 @@
 
 # Git: clone https://github.com/Jeremyrosa/MidtermProject.git
 
-
 This project is a web-based Soccer Match Tracker application developed for CSIT 337.
 It allows users to register and log in, view real-world soccer data, favorite matches,
 and track upcoming games using countdown timers until kickoff.
@@ -26,11 +25,4 @@ and track upcoming games using countdown timers until kickoff.
 
 # Soccer / MLS API: www.api-football.com/documentation-v3#tag/Widgets
 
-# Team Vote
-# Our team votes for the website SteelBeam
-
-
 # Sources: www.geeksforgeeks.org/, www.w3schools.com/
-
-
-
